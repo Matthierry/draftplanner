@@ -1,0 +1,2 @@
+import {NextResponse} from 'next/server';import {isAuthenticated} from '@/lib/auth/session';import {editSale} from '@/lib/google-sheets/repository';
+export async function PATCH(req:Request,{params}:{params:{row:string}}){if(!await isAuthenticated())return NextResponse.json({error:'Unauthenticated'},{status:401});const result=await editSale(Number(params.row),await req.json());return NextResponse.json(result,{status:result.ok?200:400});}

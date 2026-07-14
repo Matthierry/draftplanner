@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server';import {isAuthenticated} from '@/lib/auth/session';import {updateStrategyMode} from '@/lib/google-sheets/repository';export async function POST(req:Request){if(!await isAuthenticated())return NextResponse.json({error:'Unauthenticated'},{status:401});const {mode}=await req.json();return NextResponse.json(await updateStrategyMode(mode));}
