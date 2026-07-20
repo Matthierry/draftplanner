@@ -29,6 +29,7 @@ The Auction Log columns remain: pick, player ID, player name, locked position, t
 1. Open the existing Google Sheet.
 2. Select **Extensions → Apps Script**.
 3. Replace/add the project files with `Code.gs`, `Index.html`, `Styles.html`, `JavaScript.html`, and `appsscript.json` from this repository, then save.
+   - Keep `Styles.html` and `JavaScript.html` as standalone HTML partials: they already contain their own `<style>` and `<script>` wrappers, which `Index.html` includes directly.
 4. In the editor, select and run `authorizeDraftAssistant` once. Complete Google's authorisation prompts.
 5. Select **Deploy → New deployment → Web app**.
 6. Set **Execute as** to **Me**.
