@@ -1,1 +1,0 @@
-import {NextResponse} from 'next/server';import {isAuthenticated} from '@/lib/auth/session';import {undoLastSale} from '@/lib/google-sheets/repository';export async function POST(){if(!await isAuthenticated())return NextResponse.json({error:'Unauthenticated'},{status:401});return NextResponse.json(await undoLastSale());}

@@ -1,1 +1,0 @@
-@tailwind base;@tailwind components;@tailwind utilities;body{background:#08090c;color:#f8fafc}*:focus-visible{outline:2px solid #f09300;outline-offset:2px}.panel{background:#15171c;border:1px solid #2a2e38;border-radius:18px}.muted{color:#a7adbb}.num{font-variant-numeric:tabular-nums}
